@@ -161,7 +161,6 @@ else
 fi
 
 brew bundle
-atom-package-install
 
 # If this user's login shell is not already "zsh", attempt to switch.
 TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
@@ -180,7 +179,9 @@ fi
 setup_gitconfig
 install_dotfiles
 
-background="$HOME/background/current.jpg"
+atom-package-install
+
+background="$HOME/.dotfiles/background/current.jpg"
 osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$background\""
 
 echo ''
