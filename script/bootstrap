@@ -143,7 +143,7 @@ install_dotfiles () {
 }
 
 # Check for Homebrew
-if test  $(which brew)
+if test ! $(which brew)
 then
   restart=true
 fi
