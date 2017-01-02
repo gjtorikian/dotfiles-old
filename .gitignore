@@ -11,5 +11,4 @@ atom.symlink/recovery
 
 git/gitconfig.local.symlink
 
-passwordz
-system/strap_token
+passwordz/
