@@ -1,43 +1,94 @@
 "*":
+  "atom-beautify":
+    _analyticsUserId: "99b60898-492c-46ab-b2a0-67813d3c72f3"
+  "autocomplete-plus":
+    autoActivationDelay: 1
   core:
-    disabledPackages: [
-      "background-tips"
-      "exception-reporting"
-      "metrics"
-    ]
-    followSymlinks: false
-    hideGitIgnoredFiles: true
-    ignoredNames: [
-      ".bundle"
-      ".git"
-      "log"
-      "repositories"
-      "tmp"
-      "vendor"
-    ]
-    telemetryConsent: "no"
-    themes: [
-      "unity-ui"
-      "glacier-syntax"
-    ]
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    projectHome: "/Users/gjtorikian/atom"
+    telemetryConsent: "limited"
   editor:
-    fontFamily: "Menlo"
+    fontFamily: "Fira Code"
     fontSize: 15
     invisibles: {}
+    scrollPastEnd: true
     showIndentGuide: true
-    softWrapAtPreferredLineLength: true
-  "go-plus":
-    goPath: "/Users/holman/Code/go"
-  "linter-eslint":
-    useGlobalEslint: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "4e3795f6-016d-18fd-a96f-5f587dc54f16"
+  feedback:
+    username: "gjtorikian"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "find-and-replace": {}
+  fonts:
+    fontFamily: "Fira Mono"
+  "git-plus": {}
+  "jekyll-preview": {}
+  "language-babel": {}
+  linter:
+    errorPanelHeight: 24
+    showErrorInline: false
+    showErrorTabLine: true
+    statusBar: "Show error of the selected line"
+    subtleLinterErrors: [
+      "rubocop"
+    ]
+  "linter-clang": {}
+  "linter-eslint": {}
+  "linter-js-standard":
+    checkStyleDevDependencies: true
+    honorStyleSettings: true
+    lintMarkdownFiles: true
+    showEslintRules: true
+  "linter-jshint": {}
+  "linter-rubocop":
+    command: "/Users/gjtorikian/github/github/bin/rubocop"
+  "linter-sass-lint": {}
+  "markdown-preview":
+    grammars: [
+      "source.gfm"
+      "source.litcoffee"
+      "text.plain"
+      "text.plain.null-grammar"
+    ]
+  metrics:
+    userId: "063ec93e-13a3-3d46-3bf0-a4938db944eb"
+  minimap:
+    plugins:
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
   "release-notes":
-    viewedVersion: "0.89.0"
+    viewedVersion: "0.95.0"
   "spell-check":
     grammars: [
       "text.plain"
       "source.gfm"
       "text.git-commit"
-      "text.html.basic"
     ]
+  tabs:
+    enableVcsColoring: true
+    usePreviewTabs: true
+  "tree-view":
+    hideIgnoredNames: true
   welcome:
     showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".gfm.source":
+  editor:
+    preferredLineLength: 100
+    softWrap: true
+".html.liquid.text":
+  editor:
+    preferredLineLength: 100

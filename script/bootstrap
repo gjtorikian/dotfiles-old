@@ -27,6 +27,17 @@ fail () {
   exit
 }
 
+setup_strap () {
+  user ' - What is your git author name?'
+  read -e STRAP_GIT_NAME
+  user ' - What is your git author email?'
+  read -e STRAP_GIT_EMAIL
+  user ' - What is your github username?'
+  read -e STRAP_GITHUB_USER
+
+  success '😎'
+}
+
 setup_gitconfig () {
   if ! [ -f git/gitconfig.local.symlink ]
   then
@@ -38,17 +49,11 @@ setup_gitconfig () {
       git_credential='osxkeychain'
     fi
 
-    user ' - What is your github author name?'
-    read -e git_authorname
-    user ' - What is your github author email?'
-    read -e git_authoremail
-
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example > git/gitconfig.local.symlink
+    sed -e "s/AUTHORNAME/$STRAP_GIT_NAME/g" -e "s/AUTHOREMAIL/$STRAP_GIT_EMAIL/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example > git/gitconfig.local.symlink
 
     success 'gitconfig'
   fi
 }
-
 
 link_file () {
   local src=$1 dst=$2
@@ -137,20 +142,46 @@ install_dotfiles () {
   done
 }
 
+# Check for Homebrew
+if test  $(which brew)
+then
+  restart=true
+fi
+
+setup_strap
+
+if [ "$restart" = true ] ; then
+  STRAP_GITHUB_TOKEN=$(cat system/strap_token)
+  script/strap
+  info "I need to restart now. Run this script again when everything comes back."
+  sleep 5
+  sudo shutdown -r now
+else
+  info "Skipping strap because it was done!"
+fi
+
+brew bundle
+atom-package-install
+
+# If this user's login shell is not already "zsh", attempt to switch.
+TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
+if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
+  # If this platform provides a "chsh" command (not Cygwin), do it, man!
+  if hash chsh >/dev/null 2>&1; then
+    info "Time to change your default shell to zsh!\n"
+    chsh -s $(grep /zsh$ /etc/shells | tail -1)
+  # Else, suggest the user do so manually.
+  else
+    info "I can't change your shell automatically because this system does not have chsh.\n"
+    info "Please manually change your default shell to zsh!\n"
+  fi
+fi
+
 setup_gitconfig
 install_dotfiles
 
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if source bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
+background="$HOME/background/current.jpg"
+osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$background\""
 
 echo ''
 echo '  All installed!'
