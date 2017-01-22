@@ -151,7 +151,7 @@ fi
 setup_strap
 
 if [ "$restart" = true ] ; then
-  STRAP_GITHUB_TOKEN=$(cat system/strap_token)
+  STRAP_GITHUB_TOKEN=$(cat passwordz/strap_token)
   script/strap
   info "I need to restart now. Run this script again when everything comes back."
   sleep 5
