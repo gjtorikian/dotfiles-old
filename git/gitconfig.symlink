@@ -29,3 +29,13 @@
         tool = araxis
 [mergetool]
         keepBackup = false
+[credential]
+	helper = osxkeychain
+[github]
+	user = gjtorikian
+[gpg]
+	program = /usr/local/bin/gpg
+[user]
+	signingkey = DED21F68
+[commit]
+	gpgsign = true
