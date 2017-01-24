@@ -22,7 +22,6 @@ brew 'pkg-config'
 brew 'rbenv'
 brew 'rust'
 brew 'the_silver_searcher'
-brew 'valgrind'
 brew 'zsh'
 brew 'zsh-completions'
 

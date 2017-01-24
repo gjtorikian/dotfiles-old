@@ -179,7 +179,7 @@ fi
 setup_gitconfig
 install_dotfiles
 
-atom-package-install
+bin/atom-package-install
 
 background="$HOME/.dotfiles/background/current.jpg"
 osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$background\""
