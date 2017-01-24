@@ -1,5 +1,3 @@
-color-picker@2.2.3
-colorpicker@0.3.0
 file-icons@1.7.25
 grammar-token-limit@0.1.1
 language-babel@2.48.5
