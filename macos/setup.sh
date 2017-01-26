@@ -74,8 +74,13 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+# 24-hour clock
+
+defaults write com.apple.menuextra.clock DateFormat -string 'H:mm'
 
 ####### Restart!
 
 killall Dock
 killall Finder
+killall SystemUIServer
+
