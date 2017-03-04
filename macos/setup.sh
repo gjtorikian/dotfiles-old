@@ -49,7 +49,7 @@ defaults write com.apple.dock orientation -string left
 defaults write com.apple.Dock autohide-delay -float 0
 
 # Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-time-modifier -int 0
 
 # Hot corners
 # Top left screen corner → Put Display to Sleep
@@ -74,9 +74,19 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+# Trackpad
+
+# Disable Smart Zoom
+
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerDoubleTapGesture -int 0
+
 # 24-hour clock
 
 defaults write com.apple.menuextra.clock DateFormat -string 'H:mm'
+
+# Change where screenshots are saved
+
+defaults write com.apple.screencapture location /Users/gjtorikian/Desktop
 
 ####### Restart!
 
