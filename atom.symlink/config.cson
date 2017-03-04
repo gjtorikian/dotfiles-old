@@ -19,7 +19,6 @@
     telemetryConsent: "limited"
   editor:
     fontFamily: "Fira Code"
-    fontSize: 15
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
