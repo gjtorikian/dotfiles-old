@@ -15,6 +15,10 @@
       "source.python": [
         "BUCK"
       ]
+    disabledPackages: [
+      "github"
+      "language-babel"
+    ]
     projectHome: "/Users/gjtorikian/atom"
     telemetryConsent: "limited"
   editor:
@@ -36,9 +40,6 @@
   "jekyll-preview": {}
   "language-babel": {}
   linter:
-    errorPanelHeight: 24
-    showErrorInline: false
-    showErrorTabLine: true
     statusBar: "Show error of the selected line"
     subtleLinterErrors: [
       "rubocop"
@@ -54,6 +55,7 @@
   "linter-rubocop":
     command: "/Users/gjtorikian/github/github/bin/rubocop"
   "linter-sass-lint": {}
+  "linter-ui-default": {}
   "markdown-preview":
     grammars: [
       "source.gfm"
