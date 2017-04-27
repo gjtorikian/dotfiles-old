@@ -39,3 +39,5 @@
 	signingkey = DED21F68
 [commit]
 	gpgsign = true
+[url "https://"]
+	insteadOf = git://
