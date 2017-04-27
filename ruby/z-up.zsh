@@ -11,5 +11,7 @@ function z-up() {
     rm .zeus.sock
   fi
 
+  script/bootstrap
+  db-up
   bin/zeus start
 }
