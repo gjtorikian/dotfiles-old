@@ -14,7 +14,13 @@ git_prompt_info () {
   then
     echo ""
   else
-    ref=$($git symbolic-ref HEAD 2>/dev/null) || return
+    ref=$($git symbolic-ref HEAD 2>/dev/null)
+    # not a branch? maybe there's a sha.
+    if  [[ ${ref} == "" ]]
+    then
+      ref=$($git rev-parse HEAD 2>/dev/null) || return
+      ref="${ref[1,8]}"
+    fi
     if [[ $($git status --porcelain) == "" ]]
     then
       echo " %{$fg_bold[green]%}(${ref#refs/heads/})%{$reset_color%}"
