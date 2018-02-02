@@ -1,1 +1,1 @@
-if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+# if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi

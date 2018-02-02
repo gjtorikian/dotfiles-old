@@ -29,6 +29,8 @@
         tool = araxis
 [mergetool]
         keepBackup = false
+[mergetool "araxis"]
+     path = /Applications/Araxis Merge.app/Contents/Utilities/compare2
 [credential]
 	helper = osxkeychain
 [github]
@@ -36,7 +38,9 @@
 [gpg]
 	program = /usr/local/bin/gpg
 [user]
-	signingkey = DED21F68
+	signingkey = 64ABDE0A
+	name = Garen J. Torikian
+	email = gjtorikian@users.noreply.github.com
 [commit]
 	gpgsign = true
 [url "https://"]

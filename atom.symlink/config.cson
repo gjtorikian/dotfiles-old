@@ -1,6 +1,9 @@
 "*":
   "atom-beautify":
     _analyticsUserId: "99b60898-492c-46ab-b2a0-67813d3c72f3"
+  "atom-ide-ui":
+    hyperclick:
+      darwinTriggerKeys: "shiftKey,metaKey"
   "autocomplete-plus":
     autoActivationDelay: 1
   core:
@@ -16,14 +19,15 @@
         "BUCK"
       ]
     disabledPackages: [
-      "github"
       "language-babel"
+      "linter"
     ]
     projectHome: "/Users/gjtorikian/atom"
     telemetryConsent: "limited"
   editor:
     fontFamily: "Fira Code"
     invisibles: {}
+    preferredLineLength: 100
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
@@ -53,9 +57,10 @@
     showEslintRules: true
   "linter-jshint": {}
   "linter-rubocop":
-    command: "/Users/gjtorikian/github/github/bin/rubocop"
+    command: "/Users/gjtorikian/.dotfiles/bin/rubocop"
   "linter-sass-lint": {}
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   "markdown-preview":
     grammars: [
       "source.gfm"
@@ -69,6 +74,8 @@
     plugins:
       "minimap-autohide": true
       "minimap-autohideDecorationsZIndex": 0
+  "one-dark-ui":
+    hideDockButtons: true
   "release-notes":
     viewedVersion: "0.95.0"
   "spell-check":
@@ -90,6 +97,12 @@
   editor:
     preferredLineLength: 100
     softWrap: true
+    softWrapAtPreferredLineLength: true
 ".html.liquid.text":
   editor:
     preferredLineLength: 100
+".md.text":
+  editor:
+    preferredLineLength: 100
+    softWrap: true
+    softWrapAtPreferredLineLength: true
