@@ -84,13 +84,8 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFin
 
 defaults write com.apple.menuextra.clock DateFormat -string 'H:mm'
 
-# Change where screenshots are saved
-
-defaults write com.apple.screencapture location /Users/gjtorikian/Desktop
-
 ####### Restart!
 
 killall Dock
 killall Finder
 killall SystemUIServer
-

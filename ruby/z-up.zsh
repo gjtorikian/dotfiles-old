@@ -7,11 +7,12 @@
 #   $ z-up
 
 function z-up() {
+  export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
   if test -e ".zeus.sock";then
     rm .zeus.sock
   fi
-
-  script/bootstrap
+  
   db-up
   bin/zeus start
 }

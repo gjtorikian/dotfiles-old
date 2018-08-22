@@ -4,6 +4,7 @@
   "atom-ide-ui":
     hyperclick:
       darwinTriggerKeys: "shiftKey,metaKey"
+    use: {}
   "autocomplete-plus":
     autoActivationDelay: 1
   core:
@@ -20,7 +21,6 @@
       ]
     disabledPackages: [
       "language-babel"
-      "linter"
     ]
     projectHome: "/Users/gjtorikian/atom"
     telemetryConsent: "limited"
@@ -59,8 +59,7 @@
   "linter-rubocop":
     command: "/Users/gjtorikian/.dotfiles/bin/rubocop"
   "linter-sass-lint": {}
-  "linter-ui-default":
-    showPanel: true
+  "linter-ui-default": {}
   "markdown-preview":
     grammars: [
       "source.gfm"
