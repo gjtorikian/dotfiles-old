@@ -21,6 +21,8 @@
       ]
     disabledPackages: [
       "language-babel"
+      "minimap"
+      "background-tips"
     ]
     projectHome: "/Users/gjtorikian/atom"
     telemetryConsent: "limited"
@@ -52,12 +54,11 @@
   "linter-eslint": {}
   "linter-js-standard":
     checkStyleDevDependencies: true
-    honorStyleSettings: true
     lintMarkdownFiles: true
     showEslintRules: true
   "linter-jshint": {}
   "linter-rubocop":
-    command: "/Users/gjtorikian/.dotfiles/bin/rubocop"
+    command: "/Users/gjtorikian/.rbenv/shims/rubocop"
   "linter-sass-lint": {}
   "linter-ui-default": {}
   "markdown-preview":
