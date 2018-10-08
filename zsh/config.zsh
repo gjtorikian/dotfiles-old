@@ -5,9 +5,10 @@ export CLICOLOR=true
 
 # autoload -U $ZSH/functions/*(:t)
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+# Save history so we get auto suggestions
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
 
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP

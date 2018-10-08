@@ -1,5 +1,4 @@
-# init according to man page
-if (( $+commands[rbenv] ))
-then
-  eval "$(rbenv init -)"
-fi
+rbenv() {
+  eval "$(command rbenv init -)"
+  rbenv "$@"
+}
