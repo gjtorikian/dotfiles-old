@@ -165,6 +165,9 @@ brew bundle
 setup_gitconfig
 install_dotfiles
 
+sudo xcodebuild -license accept
+brew link gnupg
+
 # find the installers and run them iteratively
 for installer in $(find . -name "*install.sh"); do
   sh -c "${installer}"
