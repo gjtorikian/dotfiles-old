@@ -28,14 +28,11 @@ fail () {
 }
 
 setup_strap () {
-  user ' - What is your git author name?'
-  read -e STRAP_GIT_NAME
-  user ' - What is your git author email?'
-  read -e STRAP_GIT_EMAIL
-  user ' - What is your github username?'
-  read -e STRAP_GITHUB_USER
+  STRAP_GIT_NAME="Garen J. Torikian"
+  STRAP_GIT_EMAIL="gjtorikian@gmail.com"
+  STRAP_GITHUB_USER="gjtorikian"
 
-  success '😎'
+  success 'set up strap 😎'
 }
 
 setup_gitconfig () {
