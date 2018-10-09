@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function ghapi() {
   cmd="curl -i -u gjtorikian:${GITHUB_TOKEN} https://api.github.com$1"
   echo $cmd

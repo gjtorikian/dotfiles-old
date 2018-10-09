@@ -172,6 +172,8 @@ done
 
 bin/atom-package-install
 
+fish/install.sh
+
 macos/setup.sh
 
 background="$HOME/.dotfiles/background/current.jpg"

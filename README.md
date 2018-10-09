@@ -30,7 +30,6 @@ environment, after any `.auto.fish` files.
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
-- _topic/install.sh_: Any file named `install.sh` is automatically loaded when you call `script/bootstrap`.
 
 ## Thanks
 
