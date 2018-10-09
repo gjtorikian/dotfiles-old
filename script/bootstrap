@@ -182,7 +182,7 @@ install_dotfiles
 
 bin/atom-package-install
 
-macos/setup.auto.sh
+macos/setup.sh
 
 background="$HOME/.dotfiles/background/current.jpg"
 osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$background\""
