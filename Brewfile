@@ -137,17 +137,3 @@ cask 'viscosity'
 cask 'vlc'
 cask 'xquartz'
 
-mas 'Bear', id: 1091189122
-mas 'Civ6', id: 1123795278
-mas 'Cyberduck', id: 409222199
-mas 'GarageBand', id: 682658836
-mas 'GIF Brewery 3', id: 1081413713
-mas 'iMovie', id: 408981434
-mas 'Keynote', id: 409183694
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
-mas 'Pixelmator', id: 407963104
-mas 'Scrivener', id: 1310686187
-mas 'Slack', id: 803453959
-mas 'Textual 7', id: 1262957439
-mas 'Xcode', id: 497799835
