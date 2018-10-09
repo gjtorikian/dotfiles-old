@@ -7,13 +7,11 @@
 #
 #   $ db-up
 
-function db-up() {
-  ./bin/rake db:migrate db:test:prepare
-  if test -e "db/schema.rb";then
-    git checkout db/*.rb
-  fi
+./bin/rake db:migrate db:test:prepare
+if test -e "db/schema.rb";then
+  git checkout db/*.rb
+fi
 
-  if test -e "db/structure.sql";then
-    git checkout db/*.sql
-  fi
-}
+if test -e "db/structure.sql";then
+  git checkout db/*.sql
+fi
