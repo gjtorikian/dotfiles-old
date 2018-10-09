@@ -17,6 +17,8 @@ set __fish_git_prompt_char_upstream_behind '⬇ '
 set __fish_git_prompt_char_upstream_ahead '⬆ '
 set __fish_git_prompt_char_stateseparator ' '
 
+set -U fish_prompt_pwd_dir_length 0
+
 function fish_prompt
   set_color cyan
   printf '%s ' (prompt_pwd)
