@@ -12,12 +12,11 @@ if [[ `id -u` = 0 ]]; then
     exit;
 fi
 
-function umbrella-usage {
+function umbrella-help {
     echo "Usage: $(basename $0) COMMAND
   COMMANDS:
     stop    Run sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist
     start   Run sudo launchctl load /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist
-    restart Stop umbrella, then start again.
     status  Is umbrella running?
 ";
 }
@@ -46,3 +45,13 @@ function umbrella-status () {
     fi
     echo "Currently using name servers: $(cat /etc/resolv.conf | grep nameserver | sed 's/nameserver //' | tr '\n' ' ')"
 }
+
+case $CMD in
+    (start) umbrella-start;;
+    (stop) umbrella-stop;;
+    (status) umbrella-status;;
+    (restart) umbrella-stop && umbrella-start;;
+    (*) umbrella-help;;
+esac
+
+exit 0;

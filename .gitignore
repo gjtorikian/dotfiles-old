@@ -12,3 +12,5 @@ atom.symlink/recovery
 git/gitconfig.local.symlink
 
 passwordz/
+
+fish/fishd.*

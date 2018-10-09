@@ -28,14 +28,11 @@ fail () {
 }
 
 setup_strap () {
-  user ' - What is your git author name?'
-  read -e STRAP_GIT_NAME
-  user ' - What is your git author email?'
-  read -e STRAP_GIT_EMAIL
-  user ' - What is your github username?'
-  read -e STRAP_GITHUB_USER
+  STRAP_GIT_NAME="Garen J. Torikian"
+  STRAP_GIT_EMAIL="gjtorikian@gmail.com"
+  STRAP_GITHUB_USER="gjtorikian"
 
-  success '😎'
+  success 'set up strap 😎'
 }
 
 setup_gitconfig () {
@@ -141,6 +138,7 @@ install_dotfiles () {
     link_file "$src" "$dst"
   done
 
+  mkdir -p "$HOME/.ssh"
   link_file "$DOTFILES_ROOT/system/ssh.config" "$HOME/.ssh/config"
 }
 
@@ -154,7 +152,7 @@ setup_strap
 
 if [ "$restart" = true ] ; then
   STRAP_GITHUB_TOKEN=$(cat passwordz/strap_token)
-  script/strap
+  bash script/strap
   info "I need to restart now. Run this script again when everything comes back."
   sleep 5
   sudo shutdown -r now
@@ -164,24 +162,22 @@ fi
 
 brew bundle
 
-# If this user's login shell is not already "zsh", attempt to switch.
-TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
-if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
-  # If this platform provides a "chsh" command (not Cygwin), do it, man!
-  if hash chsh >/dev/null 2>&1; then
-    info "Time to change your default shell to zsh!\n"
-    chsh -s $(grep /zsh$ /etc/shells | tail -1)
-  # Else, suggest the user do so manually.
-  else
-    info "I can't change your shell automatically because this system does not have chsh.\n"
-    info "Please manually change your default shell to zsh!\n"
-  fi
-fi
-
 setup_gitconfig
 install_dotfiles
 
+sudo xcodebuild -license accept
+brew link gnupg
+
+# find the installers and run them iteratively
+for installer in $(find . -name "*install.sh"); do
+  sh -c "${installer}"
+done
+
 bin/atom-package-install
+
+fish/install.sh
+
+macos/setup.sh
 
 background="$HOME/.dotfiles/background/current.jpg"
 osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$background\""

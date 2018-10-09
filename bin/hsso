@@ -6,6 +6,4 @@
 #
 #   $ hsso
 
-function hsso() {
-  heroku login --sso
-}
+heroku login --sso

@@ -13,19 +13,6 @@ script/bootstrap
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
-The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
-which sets up a few paths that'll be different on your particular machine.
-
-## Topical
-
-Everything's built around topic areas:
-
-* Anything with an extension of `.zsh` will get automatically
-included into your shell.
-
-* Anything with an extension of `.symlink` will get
-symlinked without extension into `$HOME` when you run `script/bootstrap`.
-
 ## Components
 
 There's a few special files in the hierarchy.
@@ -33,12 +20,12 @@ There's a few special files in the hierarchy.
 * _bin/_: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
 * _Brewfile_: This is a list of applications for [Homebrew Cask](http://caskroom.io) to install: things like Chrome and 1Password. Might want to edit this file before running any initial setup.
-* _topic/\*.zsh_: Any files ending in `.zsh` get loaded into your
-  environment.
-* _topic/path.zsh_: Any file named `path.zsh` is loaded first and is
+* _topic/path.fish_: Any file named path.fish is loaded first and is expected to
   expected to setup `$PATH` or similar.
-* _topic/completion.zsh_: Any file named `completion.zsh` is loaded
-  last and is expected to setup autocomplete.
+- _topic/*.auto.fish_: Any files ending in .auto.fish get loaded into your
+  environment.
+- _topic/*.auto.sh_: Any files ending in .auto.sh get loaded into your
+environment, after any `.auto.fish` files.
 * _topic/\*.symlink_: Any file ending in `*.symlink` gets symlinked into
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
