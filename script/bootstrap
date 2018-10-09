@@ -138,6 +138,7 @@ install_dotfiles () {
     link_file "$src" "$dst"
   done
 
+  mkdir -p "$HOME/.ssh"
   link_file "$DOTFILES_ROOT/system/ssh.config" "$HOME/.ssh/config"
 }
 
