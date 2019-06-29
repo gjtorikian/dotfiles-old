@@ -58,7 +58,7 @@
     showEslintRules: true
   "linter-jshint": {}
   "linter-rubocop":
-    command: "/Users/gjtorikian/.rbenv/shims/rubocop"
+    command: "/Users/gjtorikian/.gem/bin/rubocop "
   "linter-sass-lint": {}
   "linter-ui-default": {}
   "markdown-preview":
