@@ -173,7 +173,7 @@ for installer in $(find . -name "*install.sh"); do
   sh -c "${installer}"
 done
 
-bin/atom-package-install
+bin/vscode-install
 
 fish/install.sh
 

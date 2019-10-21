@@ -1,0 +1,6 @@
+#!/bin/bash
+
+code --list-extensions > ~/.dotfiles/vscode/extensions.txt
+
+cp "/Users/gjtorikian/Library/Application Support/Code/User/keybindings.json" ~/.dotfiles/vscode/keybindings.json
+cp "/Users/gjtorikian/Library/Application Support/Code/User/settings.json" ~/.dotfiles/vscode/settings.json
