@@ -1,140 +1,189 @@
-tap 'buo/cask-upgrade'
-tap 'cloudfoundry/tap'
-tap 'github/bootstrap'
-tap 'heroku/brew'
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/cask-drivers'
-tap 'homebrew/cask-eid'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/core'
-tap 'homebrew/services'
-tap 'osx-cross/avr'
-tap 'shopify/shopify'
-tap 'vitorgalvao/tiny-scripts'
-
-brew 'ack'
-brew 'adns'
-brew 'astyle'
-brew 'gettext', link: true
-brew 'atk'
-brew 'autoconf'
-brew 'automake'
-brew 'berkeley-db@4'
-brew 'bison'
-brew 'openssl'
-brew 'cabal-install'
-brew 'cmake'
-brew 'coreutils'
-brew 'cowsay'
-brew 'docker', link: false
-brew 'docker-machine'
-brew 'docker-compose', link: false
-brew 'docutils'
-brew 'docx2txt'
-brew 'exercism'
-brew 'lame'
-brew 'ffmpeg', args: ['with-libass', 'with-libvorbis', 'with-libvpx', 'with-openssl', 'with-theora']
-brew 'fish'
-brew 'flex'
-brew 'fzf'
-brew 'gdk-pixbuf'
-brew 'geos'
-brew 'ghostscript'
-brew 'git'
-brew 'git-lfs'
-brew 'go'
-brew 'glide'
-brew 'gnupg', link: false
-brew 'gnuplot'
-brew 'pkg-config'
-brew 'python'
-brew 'grc'
-brew 'icu4c', link: true
-brew 'pango'
-brew 'htop'
-brew 'hyperscan'
-brew 'imagemagick', link: false
-brew 'imagemagick@6', link: true
-brew 'intltool'
-brew 'jansson'
-brew 'jemalloc'
-brew 'jq'
-brew 'launch_socket_server', restart_service: true
-brew 'launchdns', restart_service: true
-brew 'lcov'
-brew 'libdvdcss'
-brew 'libsodium'
-brew 'libssh2'
-brew 'libvpx'
-brew 'libxml2'
-brew 'llvm'
-brew 'mas'
-brew 'md5sha1sum'
-brew 'memcached', restart_service: true
-brew 'mercurial'
-brew 'mkvtoolnix'
-brew 'mongodb', restart_service: true
-brew 'mpd', args: ['with-lame']
-brew 'mysql@5.7', restart_service: true
-brew 'nginx', restart_service: true
-brew 'nmap'
-brew 'node'
-brew 'node-build'
-brew 'nodeenv'
-brew 'nodenv'
-brew 'p7zip'
-brew 'pidof'
-brew 'pinentry-mac'
-brew 'portaudio'
-brew 'postgresql', restart_service: true
-brew 'protobuf'
-brew 'pulseaudio'
-brew 'ragel'
-brew 'ruby-build'
-brew 'rbenv'
-brew 'redis', restart_service: true
-brew 'rustup-init'
-brew 's3cmd'
-brew 'sdl'
-brew 'shairport-sync'
-brew 'socat'
-brew 'softhsm'
-brew 'tesseract'
-brew 'the_silver_searcher'
-brew 'tree'
-# brew 'valgrind'
-brew 'yarn'
-brew 'youtube-dl'
-brew 'cloudfoundry/tap/cf-cli'
-brew 'heroku/brew/heroku'
-brew 'osx-cross/avr/avr-gcc'
-brew 'shopify/shopify/toxiproxy'
-brew 'vitorgalvao/tiny-scripts/cask-repair'
-cask '1password'
-cask 'araxis-merge'
-cask 'docker'
-cask 'dropbox'
-cask 'encryptme'
-cask 'firefox'
-cask 'flux'
-cask 'font-fira-code'
-cask 'google-chrome'
-cask 'google-cloud-sdk'
-cask 'gpg-suite'
-cask 'graphiql'
-cask 'handbrake'
-cask 'java'
-cask 'licecap'
-cask 'ngrok'
-cask 'skype'
-cask 'snagit'
-cask 'spotify'
-cask 'sublime-text'
-cask 'transmission'
-cask 'vagrant'
-cask 'viscosity'
-cask 'visual-studio-code'
-cask 'vlc'
-cask 'xquartz'
+tap "buo/cask-upgrade"
+tap "cloudfoundry/tap"
+tap "github/bootstrap"
+tap "goreleaser/tap"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-eid"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "mopidy/mopidy"
+tap "osx-cross/avr"
+tap "shopify/shopify"
+tap "vitorgalvao/tiny-scripts"
+brew "ack"
+brew "adns"
+brew "astyle"
+brew "gettext"
+brew "libffi"
+brew "openssl@1.1"
+brew "readline"
+brew "sqlite"
+brew "glib"
+brew "python"
+brew "atk"
+brew "autoconf"
+brew "automake"
+brew "azure-cli"
+brew "berkeley-db@4"
+brew "bison"
+brew "icu4c"
+brew "cabal-install"
+brew "circleci"
+brew "cmake"
+brew "coreutils"
+brew "cowsay"
+brew "docker", link: false
+brew "docker-compose", link: false
+brew "docker-machine", link: false
+brew "docutils"
+brew "docx2txt"
+brew "dos2unix"
+brew "elasticsearch@2.4"
+brew "exercism"
+brew "lame"
+brew "tesseract"
+brew "ffmpeg"
+brew "fish"
+brew "flex"
+brew "portaudio"
+brew "fluid-synth"
+brew "fzf"
+brew "geos"
+brew "libxml2"
+brew "gdk-pixbuf"
+brew "ghostscript"
+brew "git"
+brew "git-lfs"
+brew "glib-networking"
+brew "go"
+brew "glide"
+brew "gnupg"
+brew "pango"
+brew "gnuplot"
+brew "go@1.10"
+brew "pkg-config"
+brew "gobject-introspection"
+brew "gox"
+brew "graphviz"
+brew "grc"
+brew "groff"
+brew "gst-plugins-base"
+brew "gst-plugins-bad"
+brew "vala"
+brew "gst-plugins-good"
+brew "gst-plugins-ugly"
+brew "htop"
+brew "hugo"
+brew "hyperscan"
+brew "imagemagick", link: false
+brew "imagemagick@6", link: true
+brew "intltool"
+brew "jansson"
+brew "jemalloc"
+brew "jq"
+brew "launch_socket_server", restart_service: true
+brew "launchdns", restart_service: true
+brew "lcov"
+brew "libdvdcss"
+brew "libsodium"
+brew "libssh2"
+brew "llvm"
+brew "mas"
+brew "md5sha1sum"
+brew "memcached", restart_service: true
+brew "mercurial"
+brew "mkvtoolnix"
+brew "mpd"
+brew "mysql", restart_service: true
+brew "mysql@5.7", restart_service: true
+brew "nginx"
+brew "nmap"
+brew "node"
+brew "node-build"
+brew "nodeenv"
+brew "nodenv"
+brew "nuget"
+brew "p7zip"
+brew "postgresql", restart_service: true
+brew "pgloader"
+brew "pidof"
+brew "pinentry-mac"
+brew "protobuf", link: false
+brew "postgis"
+brew "potrace"
+brew "pulseaudio"
+brew "py2cairo"
+brew "py3cairo"
+brew "pygobject3"
+brew "ragel"
+brew "ruby-build"
+brew "rbenv"
+brew "redis", restart_service: true
+brew "ruby"
+brew "rustup-init"
+brew "s3cmd"
+brew "sdl"
+brew "shairport-sync"
+brew "socat"
+brew "softhsm"
+brew "squashfs"
+brew "swiftformat"
+brew "the_silver_searcher"
+brew "tree"
+brew "upx"
+brew "wget"
+brew "wine"
+brew "yarn"
+brew "youtube-dl"
+brew "cloudfoundry/tap/cf-cli"
+brew "goreleaser/tap/goreleaser"
+brew "heroku/brew/heroku"
+brew "osx-cross/avr/avr-gcc"
+brew "shopify/shopify/toxiproxy"
+brew "vitorgalvao/tiny-scripts/cask-repair"
+cask "1password"
+cask "araxis-merge"
+cask "atom"
+cask "docker"
+cask "dropbox"
+cask "encryptme"
+cask "firefox"
+cask "flux"
+cask "font-fira-code"
+cask "gfortran"
+cask "google-chrome"
+cask "google-cloud-sdk"
+cask "gpg-suite"
+cask "graphiql"
+cask "handbrake"
+cask "java"
+cask "java8"
+cask "licecap"
+cask "mysqlworkbench"
+cask "ngrok"
+cask "pgadmin4"
+cask "skype"
+cask "snagit"
+cask "spotify"
+cask "sublime-text"
+cask "transmission"
+cask "vagrant"
+cask "viscosity"
+cask "vlc"
+cask "vmware-fusion"
+cask "xquartz"
+mas "Amphetamine", id: 937984704
+mas "Cyberduck", id: 409222199
+mas "GarageBand", id: 682658836
+mas "GIF Brewery 3", id: 1081413713
+mas "Hex Fiend", id: 1342896380
+mas "iMovie", id: 408981434
+mas "Scrivener 3", id: 1310686187
+mas "Slack", id: 803453959
+mas "Textual IRC Client", id: 1262957439
+mas "Xcode", id: 497799835

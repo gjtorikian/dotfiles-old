@@ -52,3 +52,5 @@
 	required = true
 [http]
 	cookiefile = /Users/gjtorikian/.gitcookies
+[init]
+	defaultBranch = main

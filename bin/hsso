@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# Log in to Heroku SSO.
-#
-# USAGE:
-#
-#   $ hsso
-
-heroku login --sso
