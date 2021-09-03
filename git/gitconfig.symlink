@@ -17,7 +17,7 @@
 [pull]
         rebase = true
 [diff]
-        tool = araxis
+	tool = kaleidoscope
 [help]
         autocorrect = 1
 [push]
@@ -26,7 +26,7 @@
         compactionHeuristic = true
 
 [merge]
-        tool = araxis
+	tool = kaleidoscope
 [mergetool]
         keepBackup = false
 [mergetool "araxis"]
@@ -36,7 +36,7 @@
 [github]
 	user = gjtorikian
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /usr/local/MacGPG2/bin/gpg
 [user]
 	signingkey = 64ABDE0A
 	name = Garen J. Torikian

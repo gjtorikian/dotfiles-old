@@ -1,7 +1,6 @@
 # Via https://git.io/vS5Tk
 set __fish_git_prompt_show_informative_status 'yes'
 set __fish_git_prompt_showdirtystate 'yes'
-set __fish_git_prompt_showstashstate 'no'
 set __fish_git_prompt_showuntrackedfiles 'no'
 set __fish_git_prompt_showupstream 'yes'
 set __fish_git_prompt_color_dirtystate red

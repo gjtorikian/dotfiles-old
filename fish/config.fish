@@ -18,3 +18,4 @@ end
 for file in ~/.dotfiles/**/*.auto.sh
   sh $file
 end
+fish_add_path /usr/local/opt/curl/bin
