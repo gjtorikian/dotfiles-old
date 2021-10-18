@@ -9,7 +9,7 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
-        autocrlf = false
+	autocrlf = input
 [apply]
         whitespace = nowarn
 [branch]

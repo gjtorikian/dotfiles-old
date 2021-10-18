@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require 'nokogiri'
+require 'open-uri'
+
+model = 'MacBook_Pro_16'
+
+url = "https://buyersguide.macrumors.com/\##{model}"
+doc = Nokogiri::HTML(URI.open(url))
+
+laptop_section = doc.search("//div[contains(@id,'#{model}')]/div[2]/div[2]/div")
+
+puts "#{url}\n\n"
+
+results = laptop_section.children.map do |child|
+  date =  child.at('strong').text
+  content = child.search('a[1]')[1].text
+  link = child.search('a[1]')[1].attr('href')
+  "#{date}: #{content}\n#{link}"
+end
+
+puts results.join("\n\n")
