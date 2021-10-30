@@ -6,7 +6,6 @@ dotiful.dotfiles-syntax-highlighting
 eg2.tslint
 esbenp.prettier-vscode
 kumar-harsh.graphql-for-vscode
-lunaryorn.fish-ide
 mechatroner.rainbow-csv
 mikestead.dotenv
 misogi.ruby-rubocop
@@ -19,6 +18,5 @@ ms-vscode.wordcount
 OmarTawfik.github-actions-vscode
 rebornix.ruby
 sidneys1.gitconfig
-skyapps.fish-vscode
 streetsidesoftware.code-spell-checker
 xyz.plsql-language
