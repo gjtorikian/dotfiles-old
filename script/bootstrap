@@ -182,8 +182,6 @@ install_dotfiles
 sudo xcodebuild -license accept
 brew link gnupg
 
-bin/vscode-install
-
 macos/setup.sh
 
 background="$HOME/.dotfiles/background/current.jpg"
