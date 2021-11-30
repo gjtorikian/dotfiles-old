@@ -47,9 +47,6 @@ setup_strap
 if [ "$restart" = true ] ; then
   STRAP_GITHUB_TOKEN=$(cat passwordz/strap_token)
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/MikeMcQuaid/strap/HEAD/bin/strap.sh)"
-  info "I need to restart now. Run this script again when everything comes back."
-  sleep 5
-  sudo shutdown -r now
 else
   info "Skipping strap because it was done!"
 fi
