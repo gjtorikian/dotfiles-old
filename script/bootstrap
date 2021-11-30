@@ -45,5 +45,7 @@ fi
 setup_strap
 
 STRAP_GITHUB_TOKEN=$(cat passwordz/strap_token)
-git clone https://github.com/MikeMcQuaid/strap script
+cd script
+git clone https://github.com/MikeMcQuaid/strap
+cd ..
 bash script/bin/strap.sh
