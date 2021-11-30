@@ -48,4 +48,4 @@ STRAP_GITHUB_TOKEN=$(cat passwordz/strap_token)
 cd script
 git clone https://github.com/MikeMcQuaid/strap
 cd ..
-bash script/bin/strap.sh
+bash script/strap/bin/strap.sh
