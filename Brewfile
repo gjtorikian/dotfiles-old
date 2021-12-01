@@ -1,5 +1,5 @@
 tap "buo/cask-upgrade"
-tap "caskroom/cask"
+tap "homebrew/cask"
 tap "cloudfoundry/tap"
 tap "goreleaser/tap"
 tap "heroku/brew"
