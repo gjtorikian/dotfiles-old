@@ -2,4 +2,4 @@ git/gitconfig.local.symlink
 
 passwordz/
 
-fish/fishd.*
+script/strap

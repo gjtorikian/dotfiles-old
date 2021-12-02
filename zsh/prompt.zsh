@@ -40,6 +40,7 @@ set_prompt () {
 }
 
 precmd() {
-  title "zsh" "%m" "%55<...<%~"
+  window_title="\033]0;${PWD##*/}\007"
+  echo -ne "$window_title"
   set_prompt
 }
