@@ -1,44 +1,42 @@
 # Local/private config goes in the include
 [include]
-        path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
 [core]
-        excludesfile = ~/.gitignore
-        editor = vim
-	autocrlf = input
+  excludesfile = ~/.gitignore
+  editor = vim
+  autocrlf = input
 [apply]
-        whitespace = nowarn
+  whitespace = nowarn
 [branch]
-        autosetuprebase = always
-[pull]
-        rebase = true
-[diff]
-	tool = kaleidoscope
+  autosetuprebase = always
 [help]
-        autocorrect = 1
+  autocorrect = 1
 [push]
-        default = simple
+  default = simple
+[pull]
+  rebase = true
 [diff]
-        compactionHeuristic = true
-
-[merge]
 	tool = kaleidoscope
+  compactionHeuristic = true
+[merge]
+	tool = araxis
 [mergetool]
         keepBackup = false
 [mergetool "araxis"]
-     path = /Applications/Araxis Merge.app/Contents/Utilities/compare2
+     path = "/Applications/Araxis Merge.app/Contents/Utilities/compare"
 [credential]
 	helper = osxkeychain
 [github]
 	user = gjtorikian
 [gpg]
-	program = /usr/local/MacGPG2/bin/gpg
+	program = gpg
 [user]
-	signingkey = 64ABDE0A
+	signingkey = 9EB81BA8F4A78C6B
 	name = Garen J. Torikian
 	email = gjtorikian@users.noreply.github.com
 [commit]
