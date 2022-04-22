@@ -1,4 +1,8 @@
 #!/bin/bash
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
-git push git@github.com:$1/$2.git $BRANCH:$3
+
+# $1 is their username/repo name (repo_nwo)
+# $2 is their branch name
+git fetch git@github.com:$1.git $2
+git push git@github.com:$1.git $BRANCH:$2

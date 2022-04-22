@@ -1,0 +1,11 @@
+#!/bin/bash
+
+git add .
+
+PREV_COMMIT=$(git log -1 --format="format:%H")
+git commit --fixup $PREV_COMMIT
+echo "Fixup committed"
+
+CURR_COMMIT=$(git log -1 --format="format:%H")
+$(GIT_EDITOR=true git rebase -i --autosquash HEAD~2)
+echo "Rebase made"

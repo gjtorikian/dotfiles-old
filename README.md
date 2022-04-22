@@ -22,7 +22,7 @@ There's a few special files in the hierarchy.
 * _Brewfile_: This is a list of applications for [Homebrew Cask](http://caskroom.io) to install: things like Chrome and 1Password. Might want to edit this file before running any initial setup.
 * _topic/path.zsh_: Any file named path.zsh is loaded first and is expected to
   expected to setup `$PATH` or similar.
-- _topic/*.zsh_: Any files ending in .auto.zsh get loaded into your
+- _topic/*.zsh_: Any files ending in .zsh get loaded into your
   environment.
 * _topic/\*.symlink_: Any file ending in `*.symlink` gets symlinked into
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles

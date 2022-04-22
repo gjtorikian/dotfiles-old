@@ -1,0 +1,4 @@
+#!/bin/bash
+
+curr=`git rev-parse --abbrev-ref HEAD`
+git branch | grep -v "$curr" | xargs git branch -D
